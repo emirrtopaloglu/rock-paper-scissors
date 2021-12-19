@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="modal-overlay"></div>
+
+    <div class="wrapper">
+        <div class="left-side">
+            <h2 class="title">You</h2>
+            <div class="left-image">
+                <img src="img/rock.png" width="300" height="300">
+            </div>
+            <h2 id="leftScore" class="title">0</h2>
+        </div>
+
+        <div class="center-side">
+            <h2 class="result"></h2>
+            <button id="PlayButton" class="play-button">Play</button>
+        </div>
+
+        <div class="right-side">
+            <h2 class="title">Computer</h2>
+            <div class="right-image">
+                <img src="img/rock.png" width="300" height="300">
+            </div>
+            <h2 id="rightScore" class="title">0</h2>
+        </div>
+    </div>
+
+    <div class="play-modal">
+        <h2 class="title">Select One</h2>
+        <div class="play-select">
+            <div class="item" data-value="rock">
+                <img src="img/rock.png">
+            </div>
+        </div>
+        <div class="play-select">
+            <div class="item" data-value="paper">
+                <img src="img/paper.png">
+            </div>
+        </div>
+        <div class="play-select">
+            <div class="item" data-value="scissors">
+                <img src="img/scissors.png">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

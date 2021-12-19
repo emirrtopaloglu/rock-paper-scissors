@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.overlay {
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.overlay::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 75px;
+}
+
+.left-side {
+    margin-left: 100px;
+}
+
+.right-side {
+    margin-right: 100px;
+}
+
+.left-image {
+    transform: rotate(90deg);
+}
+
+.right-image {
+    transform: rotateY(180deg) rotate(90deg);
+}
+
+.center-side {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.center-side .result {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-size: 4em;
+    width: 100%;
+}
+
+.play-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    padding: 20px 60px;
+    cursor: pointer;
+}
+
+.title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 3em;
+}
+
+.play-modal {
+    display: none;
+    justify-content: space-between;
+    width: 40%;
+    background-color: #fff;
+    padding: 20px 50px 50px 50px;
+    position: absolute;
+    top: 20%;
+    left: 26.75%;
+    margin: auto;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.play-modal.show {
+    display: flex;
+}
+
+.play-select {
+    width: 30%;
+}
+
+.item img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.play-modal .title {
+    color: #000;
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.modal-overlay {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: none;
+}
+
+.modal-overlay.show {
+    display: block;
+}
+
+.item {
+    cursor: pointer;
+}
